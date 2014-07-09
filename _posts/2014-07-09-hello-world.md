@@ -2,7 +2,7 @@
 layout: post
 title: "Hello_world!"
 modified: 2014-07-09 17:46:52 +0200
-category: [Misc]
+category: Misc
 tags: [Misc,About,hello]
 image:
   feature: hello_world_feature.jpg
