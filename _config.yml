@@ -39,10 +39,8 @@ links:
     url: /about/
   - title: Posts
     url: /posts/
-  - title: Theme Setup
-    url: /theme-setup/
-  - title: Made Mistakes
-    url: http://mademistakes.com
+  - title: (french) Webpage
+    url: http://mickael-goubin.fr
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
