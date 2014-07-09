@@ -16,10 +16,10 @@ So, this is my first blog post.
 First let me introduce myself.
 My name is Mickael, I'm a student in an Engineering school in Toulouse, France (INSA). I've been found of CS since I was young enough to hold a mouse, and now, I consider myself as a self-taught android developper.
 
+##What to expect?
 Around here, I'll be talking a lot about Android Development. Since I've been working on Android for a few years, I've started to find some interesting stuff that I could share with you.
 
 
 Feel free to follow me on twitter, and comment and share and everything ! :-)
 
-
-Cheers! :)
+Cheers!
