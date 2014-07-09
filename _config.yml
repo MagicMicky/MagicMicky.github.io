@@ -1,5 +1,6 @@
 name: Yet Another Android Development Blog
-pygments: false
+pygments: false 
+highlighter: rouge
 
 
 author :
