@@ -7,7 +7,7 @@ disqus_shortname: MickaelDevBlog
 # Owner/author information
 owner:
   name:           Mickael Goubin
-  avatar:         bio-photo.jpg
+  avatar:         http://www.gravatar.com/avatar/723f423df75097749f42716591400dc5.png?s=100
   bio:            "A French Android Developer."
   email:          micky0304@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
