@@ -6,15 +6,15 @@ disqus_shortname: MickaelDevBlog
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           Mickael Goubin
   avatar:         bio-photo.jpg
-  bio:            "Describe your self."
+  bio:            "A French Android Developer."
   email:          micky0304@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   twitter:		  MagicMicky
   facebook:
   github:		  MagicMicky
-  stackoverflow:  https://stackoverflow.com/users/1376834/magicmicky
+  stackoverflow:  1376834/magicmicky
   linkedin:
   instagram:
   lastfm:
@@ -24,7 +24,7 @@ owner:
   steam:
   dribbble:
   # For Google Authorship https://plus.google.com/authorship
-  google_plus: https://plus.google.com/+MickaelGoubin
+  google_plus: MickaelGoubin
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: UA-52662187-1
