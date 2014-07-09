@@ -81,12 +81,6 @@ prose:
     - /_includes
   metadata:
     _posts:
-      - name: "title"
-        field:
-          element: "text"
-          label: "Title"
-          value: ""
-          type: "text"
       - name: "description"
         field:
           label: "Description"
@@ -101,11 +95,7 @@ prose:
         field:
           element: "hidden"
           value: "post"
-      - name: "tags"
-        field:
-          element: "multiselect"
-          label: "Add Tags"
-          placeholder: "Choose Tags"
+
 
 #    _posts/static:
 #      - name: "layout"
