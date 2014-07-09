@@ -69,5 +69,57 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: class
 
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://magicmicky.github.io/'
+#  relativeLinks: 'http://prose.github.io/starter/links.jsonp'
+  media: 'images'
+  ignore:
+    - index.md
+    - _config.yml
+    - /_layouts
+    - /_includes
+  metadata:
+    _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+          type: "text"
+      - name: "description"
+        field:
+          label: "Description"
+          element: "textarea"
+          placeholder: "Your article description"
+      - name: "comments"
+        field:
+          element: "checkbox"
+          label: "Comments"
+          value: "true"
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          options:
+            - name: "Apples"
+              value: "apples"
+            - name: "Bananas"
+              value: "bananas"
+#    _posts/static:
+#      - name: "layout"
+#        field:
+#          element: "hidden"
+#          value: "page"
+#      - name: "permalink"
+#        field:
+#          element: "text"
+#          label: "Permalink"
+#          value: ""
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
