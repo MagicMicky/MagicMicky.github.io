@@ -1,8 +1,8 @@
-title:            Mickael's Android Development Blog
+title:            Mickael's Android Playground
 description:      A blog about android development
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://magicmicky.github.io
-disqus_shortname: MickaelDevBlog
+disqus_shortname: MickaelPlayground
 
 # Owner/author information
 owner:
