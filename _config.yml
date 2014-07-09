@@ -101,6 +101,12 @@ prose:
         field:
           element: "hidden"
           value: "post"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+
 #    _posts/static:
 #      - name: "layout"
 #        field:
