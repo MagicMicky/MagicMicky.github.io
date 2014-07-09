@@ -5,7 +5,7 @@ title: About Me
 tagline: Who am I in this world?
 tags: [about]
 modified: 9-9-2013
-comments: true
+comments: false
 image:
   feature: texture-feature-02.jpg
   credit: Texture Lovers
