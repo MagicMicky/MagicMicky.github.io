@@ -15,9 +15,9 @@ owner:
   bio:            "A French Android Developer."
   email:          micky0304@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter:		  MagicMicky
+  twitter:        MagicMicky
   facebook:
-  github:		  MagicMicky
+  github:         MagicMicky
   stackoverflow:  1376834/magicmicky
   linkedin:
   instagram:
@@ -42,8 +42,8 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: About
-    url: /about
+#  - title: About
+#    url: /about
   - title: (french) Webpage
     url: http://mickael-goubin.fr
     external: true
