@@ -1,3 +1,18 @@
+.ctm_profile-image{
+ float: left;
+ margin: 0 20px 0 0px;
+ width:100px;
+ height:100px;
+}
+.ctm_owner-name {
+ margin-top:0.5em;
+ margin-bottom:0;
+}
+.ctm_owner-bio {
+ margin-top:0;
+}
+
+
 /*! 
 // ===========================================================
 // HPSTR Jekyll Theme
