@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "View inflation vs `visibility:\"GONE\"` : a battle fought with DDMS"
+title: "View inflation vs visibility:&#34;GONE&#34;: a battle fought with DDMS"
 category: Android_development
 tags: [Optimisation,layout,DDMS]
 image:
