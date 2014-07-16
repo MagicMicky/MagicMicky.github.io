@@ -6,6 +6,7 @@ tagline: Who am I in this world?
 tags: [about]
 modified: 9-9-2013
 comments: false
+reading_time: false
 image:
   feature: star_wars_solo.jpg
   credit: leg0fenriz
