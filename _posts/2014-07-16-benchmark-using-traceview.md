@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "View inflation vs visibility:&#34;GONE&#34;: a battle fought with DDMS"
+modified: 2014-07-20
 category: Android_development
 tags: [Optimisation,layout,DDMS]
 image:
@@ -83,6 +84,10 @@ So, to conclude about this, inflating a layout with some views with a visibility
 I hope you learned some stuff, and if you feel that you can add some information in here or that you don't understand something, feel free to comment this post or to email me !
 
 
+>**Edit**<br/>
+>As said in comments, a simpler way to manager this kind of view would be to use [ViewStub][8]. It allows you to inflate easily a view when needed, without doing it programmatically.
+> This article is here to explain how to easily use TraceView to test your app's performance, and let people know that inflating views which will stay as `GONE` forever is bad!
+
 [1]: http://english.stackexchange.com/questions/12245/frequent-use-of-word-not-found-in-dictionary-programatically
 [2]: http://stackoverflow.com/q/24633002/1376834 
 [3]: http://developer.android.com/tools/debugging/ddms.html
@@ -90,3 +95,4 @@ I hope you learned some stuff, and if you feel that you can add some information
 [5]: http://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them
 [6]: https://gist.github.com/MagicMicky/3868f9ea762e4ad95884`
 [7]: /upload/traces.zip
+[8]: http://developer.android.com/training/improving-layouts/loading-ondemand.html
