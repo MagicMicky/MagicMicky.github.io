@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Loose coupling when doing In-app communication"
+title: "Loosely coupled In-app communication in Android"
 category: Android_development
 tags: [Architecture,library]
 image:
