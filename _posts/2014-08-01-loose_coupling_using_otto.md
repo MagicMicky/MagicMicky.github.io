@@ -12,7 +12,7 @@ share: true
 --- 
  
 # The problem
-When designing an application, I had a problem with my framgents' interaction. I decided to let my activity hold every information important to my Application, and let the fragments access those data directly via the Activity.
+When designing an application, I had a problem with my fragments' interaction. I decided to let my activity hold every information important to my Application, and let the fragments access those data directly via the Activity.
 The problem is that Fragments and Activities aren't supposed to be that tightly coupled. A fragment is supposed to be independent from its activity lifecycle, and we're going to se why...
 
 ## Be careful with your Bundles.
