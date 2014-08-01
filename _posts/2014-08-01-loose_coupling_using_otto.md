@@ -13,7 +13,7 @@ share: true
  
 # The problem
 When designing an application, I had a problem with my fragments' interaction. I decided to let my activity hold every information important to my Application, and let the fragments access those data directly via the Activity.
-The problem is that Fragments and Activities aren't supposed to be that tightly coupled. A fragment is supposed to be independent from its activity lifecycle, and we're going to se why...
+The problem is that Fragments and Activities aren't supposed to be that tightly coupled. A fragment is supposed to be independent from its activity lifecycle, and we're going to see why...
 
 ## Be careful with your Bundles.
 Ok, just imagine that you have your Activity, that holds some API result information. This API information needs to be provided to all of your fragments inside your activity. No problem, you can create your fragment using a static method, pass the information you need **via a Bundle**, and use a callback to update the data as needed. It would seem rather easy, and is what Android Studio propose to generate when you create a new Fragment.
@@ -127,7 +127,7 @@ Now, everytime someone will send a "ShopEvent" event to the bus, our Activity wi
 Once posted, every class that subscribed to the ShopEvent event type, via our Bus, will be notified of this new events!
 
 >**Pro-tip:**<br>
-> There is an Intellij plugin for Otto. It allows you to go bakc and forth in the events posted by Otto. See [here][8] for more information!
+> There is an Intellij plugin for Otto. It allows you to go back and forth in the events posted by Otto. See [here][8] for more information!
 
 I'll leave you find a lot more example on how to use Otto, including [otto samples][7], and its [documentation][5]. I hope this article helped you think about how to do in-app communication in Android. If you have any suggestion, question, or you think I forgot something, feel free to comment below! :-)
 
