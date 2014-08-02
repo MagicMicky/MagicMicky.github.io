@@ -18,14 +18,16 @@ The problem is that Fragments and Activities aren't supposed to be that tightly 
 ## Be careful with your Bundles.
 Ok, just imagine that you have your Activity, that holds some API result information. This API information needs to be provided to all of your fragments inside your activity. No problem, you can create your fragment using a static method, pass the information you need **via a Bundle**, and use a callback to update the data as needed. It would seem rather easy, and is what Android Studio propose to generate when you create a new Fragment.
 
-	public static MyFragment newInstance(Shop shop) {
-		MyFragment c = new MyFragment();
-		Bundle b = new Bundle();
-		b.putParcelable(MyFragment.SHOP_KEY, shop);
-		c.setArguments(b);
-		return c;
-	}
-	
+{% highlight java %}
+public static MyFragment newInstance(Shop shop) {
+	MyFragment c = new MyFragment();
+	Bundle b = new Bundle();
+	b.putParcelable(MyFragment.SHOP_KEY, shop);
+	c.setArguments(b);
+	return c;
+}
+{% endhighlight %}
+
 > **Note**<br/>
 > A [Parcelable][9] object allows you to write and restore your data from a "Parcel". This lets you serialize your data, so that it can be restored later.
 > 
@@ -35,21 +37,25 @@ A question that [popped][1] to my mind was whether or not using a bundle to pass
 
 You might also know that, depending on your activity's/fragment's state, your app might be killed. There's a magical little method called `onSaveInstanceState(Bundle)`, that allows you to save some data before getting killed **in both your fragments and your activity**, so that you can retrieve them later. It is for example called when you change your phone's orientation, letting you save your state and retrieve it once the orientation is changed. So, now, imagine you'd want to save your data (let's stay with a Shop example), into your savedInstanceState Bundle, you'd simply do the following:
 
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putParcelable(MyFragment.SHOP_KEY, mShop);
-    }
+{% highlight java %}
+@Override
+public void onSaveInstanceState(Bundle outState) {
+	super.onSaveInstanceState(outState);
+	outState.putParcelable(MyFragment.SHOP_KEY, mShop);
+}
+{% endhighlight %}
 
 And you'd be able to retrieve it in your onCreate as follow
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if(savedInstanceState != null) {
-            mShop = (Shop) savedInstanceState.get(MyFragment.SHOP_KEY);
-        }
-    }
+{% highlight java %}
+@Override
+public void onCreate(Bundle savedInstanceState) {
+	super.onCreate(savedInstanceState);
+	if(savedInstanceState != null) {
+		mShop = (Shop) savedInstanceState.get(MyFragment.SHOP_KEY);
+	}
+}
+{% endhighlight %}
 
 Now, let's assume that since you want your Shop to be saved in both your fragment and in your activity, you save your shop in both your activity's onSaveInstanceState, and your Fragment's. Do you think that after your app gets put on background and killed, the Shop contained in your activity and in your fragment will still be of the same instance? Well, **no**! Not only it isn't the same instance as before (which seems logic, since your Fragment and Activity got destroyed), but the two Shops aren't of the same instance at all! See the following logcat:
 
@@ -89,36 +95,42 @@ Otto is a BusEvent implementation, based on Guava. It's really simple to use, an
 
 First, we need to be able to have the same Bus instance, over our application. To do so, you can simply create a singleton bus:
 
-	public class BusProvider {
-		private static final Bus BUS = new Bus();
-		private BusProvider() {}
-		
-		public static Bus getInstance() {
-			return BUS;
-		}
+{% highlight java %}
+public class BusProvider {
+	private static final Bus BUS = new Bus();
+	private BusProvider() {}
+	
+	public static Bus getInstance() {
+		return BUS;
 	}
+}
+{% endhighlight %}
 
 Then, we can declare an event type. This will be the event thrown through our Bus, to notify of a shop name that changes.
 
-    public class ShopEvent {
-        private final String mNewName;
-		
-        public Shop(String newName) {
-            this.mNewName = newName;
-        }
+{% highlight java %}
+public class ShopEvent {
+	private final String mNewName;
+	
+	public Shop(String newName) {
+		this.mNewName = newName;
+	}
 
-        public String getmName() {
-            return mNewName;
-        }
-    }
+	public String getmName() {
+		return mNewName;
+	}
+}
+{% endhighlight %}
 
 We now need to make our Activity register to our Bus : just call `BusProvider.getInstance().register(this)`, in your Activity's `onResume()`, and `BusProvider.getInstance().unregister(this)`, in `onPause()`.
 
 Then we define a method, with the `@Subscribe` annotation, and a single argument corresponding to our Event type.
 
-	@Subscribe onShopChangingName(ShopEvent shopEvent) {
-		//do stuff
-	}
+{% highlight java %}
+@Subscribe onShopChangingName(ShopEvent shopEvent) {
+	//do stuff
+}
+{% endhighlight %}
 
 Now, everytime someone will send a "ShopEvent" event to the bus, our Activity will be notified. So, to send this ShopEvent, we simply need to use the `post(Object event)` of our Bus, with as argument, an instance of our ShopEvent.
 
