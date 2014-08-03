@@ -112,7 +112,7 @@ Then, we can declare an event type. This will be the event thrown through our Bu
 public class ShopEvent {
 	private final String mNewName;
 	
-	public Shop(String newName) {
+	public ShopEvent(String newName) {
 		this.mNewName = newName;
 	}
 
