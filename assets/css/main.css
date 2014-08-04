@@ -3911,13 +3911,13 @@ body {
   line-height: 1.625;
 }
 
-.entry-content p > a,
+.entry-content p>a, .entry-content h1>a, .entry-content h2>a, .entry-content h3>a, .entry-content h4>a, .entry-content h5>a, .entry-content h6>a, .entry-content li>a,
 .entry-content li > a {
   border-bottom: 1px dotted #a2a2a2;
 }
 
-.entry-content p > a:hover,
-.entry-content li > a:hover {
+.entry-content p>a:hover, .entry-content h1>a:hover, .entry-content h2>a:hover, .entry-content h3>a:hover, .entry-content h4>a:hover, .entry-content h5>a:hover, .entry-content h6>a:hover,
+.entry-content li>a:hover {
   border-bottom-style: solid;
 }
 
@@ -4170,7 +4170,7 @@ body {
 @media only screen and (min-width: 62.5em) {
   #post .entry-content,
   #page .entry-content {
-    max-width: 800px;
+    max-width: 900px;
     padding: 50px 80px;
     margin: 50px auto 30px auto;
   }
@@ -4207,7 +4207,7 @@ body {
 @media only screen and (min-width: 62.5em) {
   #post #disqus_thread,
   #page #disqus_thread {
-    max-width: 800px;
+    max-width: 900px;
     padding: 50px 80px;
     margin: 0 auto 30px auto;
   }
@@ -4266,7 +4266,7 @@ body {
 
 @media only screen and (min-width: 62.5em) {
   .read-more {
-    max-width: 800px;
+    max-width: 900px;
     padding: 50px 80px;
     margin: 60px auto;
   }
@@ -4396,7 +4396,7 @@ body {
 
 @media only screen and (min-width: 62.5em) {
   #post-index #main {
-    max-width: 800px;
+    max-width: 900px;
     margin-top: 50px;
     margin-right: auto;
     margin-left: auto;
@@ -4521,3 +4521,21 @@ body {
   color: #222222;
   background-color: #ffffff;
 }
+
+ /*
+  * Mickael's addition
+  */
+.ctm_profile-image{
+ float: left;
+ margin: 0 20px 0 0px;
+ width:100px;
+ height:100px;
+}
+.ctm_owner-name {
+ margin-top:0.5em;
+ margin-bottom:0;
+}
+.ctm_owner-bio {
+ margin-top:0;
+}
+
