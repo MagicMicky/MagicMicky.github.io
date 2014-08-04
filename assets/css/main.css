@@ -3976,6 +3976,10 @@ All this is done for any sub-level being entered.
   cursor: -moz-zoom-in;
   cursor: zoom-in;
 }
+a.image-popup {
+  cursor: auto;
+}
+
 
 .mfp-auto-cursor .mfp-content {
   cursor: auto;
